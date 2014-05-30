@@ -1,6 +1,6 @@
 # rind-i18n [![](https://travis-ci.org/creativelive/rind-i18n.png)](https://travis-ci.org/creativelive/rind-i18n)
 
-Turn a collection of [https://github.com/SlexAxton/messageformat.js](messageformat) json files into a dictionary object.
+Turn a collection of [messageformat](https://github.com/SlexAxton/messageformat.js) json files into a dictionary object.
 
 ## Usage
 
