@@ -1,6 +1,6 @@
 {
   "name": "rind-i18n",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "rind i18n internationalization",
   "main": "index.js",
   "scripts": {
