@@ -1,4 +1,4 @@
-# rind-i18n [![](https://travis-ci.org/creativelive/rind-i18n.png)](https://travis-ci.org/creativelive/rind-i18n)
+# rind-i18n [![](https://travis-ci.org/creativelive/rind-i18n.svg)](https://travis-ci.org/creativelive/rind-i18n)
 
 Turn a collection of [messageformat](https://github.com/SlexAxton/messageformat.js) json files into a dictionary object.
 
