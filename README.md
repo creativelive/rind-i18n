@@ -7,10 +7,10 @@ Turn a collection of [messageformat](https://github.com/SlexAxton/messageformat.
 Given the file structure:
 ```
 └── lang
-    ├── en-us
+    ├── en-US
     │   └── foo
     │       └── main.json
-    └── fr-fr
+    └── fr-FR
         └── foo
             └── main.json
 ```
@@ -23,6 +23,6 @@ var opts = {
 }
 var dictionary = require('rind-i18n')(opts);
 
-dictionary['en-us'].main.greeting() // hello
-dictionary['fr-fr'].main.greeting() // bonjour
+dictionary['en-US'].foo.main.greeting() // hello
+dictionary['fr-FR'].foo.main.greeting() // bonjour
 ```
