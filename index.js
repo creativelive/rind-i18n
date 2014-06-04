@@ -6,7 +6,6 @@ var MessageFormat = require('messageformat');
 var langs = {};
 var messageFormatters = {};
 var locale, lang, split, terms, key;
-var deepval = require('deepval');
 
 function dictionary(opts) {
   opts.cwd = opts.cwd || process.cwd();
@@ -27,13 +26,15 @@ function dictionary(opts) {
 
     terms = require(path.join(opts.cwd, file));
     split = split.splice(1);
-
-    key = split.concat([split.pop().slice(0, -5)]).join('.');
+    key = split.concat([split.pop().slice(0, -5)]).join('/');
 
     Object.keys(terms).forEach(function(message) {
-      deepval(langs, locale + '.' + key + '.' + message, messageFormatters[locale].compile(terms[message]));
+      langs[locale] = langs[locale] || {};
+      langs[locale][key] = langs[locale][key] || {};
+      langs[locale][key][message] = messageFormatters[locale].compile(terms[message]);
     });
   });
+
   return langs;
 }
 

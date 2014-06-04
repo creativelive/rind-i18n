@@ -23,6 +23,6 @@ var opts = {
 }
 var dictionary = require('rind-i18n')(opts);
 
-dictionary['en-US'].foo.main.greeting() // hello
-dictionary['fr-FR'].foo.main.greeting() // bonjour
+dictionary['en-US']['foo/main'].greeting() // hello
+dictionary['fr-FR']['foo/main'].greeting() // bonjour
 ```

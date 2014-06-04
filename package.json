@@ -1,6 +1,6 @@
 {
   "name": "rind-i18n",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "rind i18n internationalization",
   "main": "index.js",
   "scripts": {
@@ -31,7 +31,6 @@
   },
   "dependencies": {
     "glob": "^4.0.0",
-    "messageformat": "SlexAxton/messageformat.js#b5ae3d5fba",
-    "deepval": "^1.1.3"
+    "messageformat": "SlexAxton/messageformat.js#b5ae3d5fba"
   }
 }
