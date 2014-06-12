@@ -10,6 +10,7 @@ var locale, lang, split, terms, key;
 function dictionary(opts) {
   opts.cwd = opts.cwd || process.cwd();
   opts.glob = opts.glob || '**/*.json';
+  opts.strict = opts.strict || false;
 
   var files = glob.sync(opts.glob, {
     cwd: opts.cwd
@@ -29,6 +30,11 @@ function dictionary(opts) {
     key = split.concat([split.pop().slice(0, -5)]).join('/');
 
     Object.keys(terms).forEach(function(message) {
+      if(opts.strict){
+        if(message !== message.toUpperCase()) {
+          throw new Error('strict mode, key not uppercased: ' + locale + '[\'/' + key + '\'].' + message);
+        }
+      }
       langs[locale] = langs[locale] || {};
       langs[locale][key] = langs[locale][key] || {};
       langs[locale][key][message] = messageFormatters[locale].compile(terms[message]);
