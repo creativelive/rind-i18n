@@ -30,8 +30,8 @@ function dictionary(opts) {
     key = split.concat([split.pop().slice(0, -5)]).join('/');
 
     Object.keys(terms).forEach(function(message) {
-      if(opts.strict){
-        if(message !== message.toUpperCase()) {
+      if (opts.strict) {
+        if (message !== message.toUpperCase()) {
           throw new Error('strict mode, key not uppercased: ' + locale + '[\'/' + key + '\'].' + message);
         }
       }
